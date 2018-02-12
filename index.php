@@ -28,14 +28,43 @@ echo count($words)."<br>";
 
 /* Question 6 uses same code as question 5 becauase asking for length of string and returning the result */
 $words = explode(" ", $date);
-echo count($words)."<br>";
+echo strlen($date)."<br>";
 
 /* question 7 using the date string */
 echo ord($date)."<br>";
 
+/* question 8 */
+echo substr($date, -2);
+echo "<br>";
+
+/* question 9 */
+for ($b=0; $b < $date.length; $b++) {
+	if ($date[$b] == ' ') {
+		$date[$b] = '/';
+	}
+}
+
+$newdate = explode('/', $date);
+	echo $newdate[0]." ";
+	echo $newdate[1]." ";
+	echo $newdate[2];
+
+echo "<br><br>";
+
+/* question 10 */
 
 $year = array("2012", "396", "300","2000", "1100", "1089");
-echo "The value of \$year: ";
-print_r($year)
+
+foreach ($year as $value) {
+	if ($value % 4 == 0) {
+		echo "True ";
+	}
+	else {
+		echo "False ";
+	}
+}
+
+
+
 
 ?>
