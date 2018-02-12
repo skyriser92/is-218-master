@@ -15,6 +15,13 @@ else {
 	echo "oops";
 }
 
+for ($i=0; $i < $date.length; $i++) {
+	if ($date[$i] == '/') {
+		$date[$i] = ' ';
+	}
+}
+echo $date;
+
 $year = array("2012", "396", "300","2000", "1100", "1089");
 echo "The value of \$year: ";
 print_r($year)
